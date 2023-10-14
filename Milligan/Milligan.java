@@ -9,9 +9,9 @@ public class Milligan {
     protected String answer;
     protected static final double temp1 = 1.5;
     protected static final double temp2 = 0.5;
-    protected double StandardElectron = 1.6E-19;
     protected double q = 0.0;
     protected long n = 0;
+    public double StandardElectron = 1.6E-19;
     public double finalAnswer = 0.0;
 
     public Milligan(int a1, double a2, int a3, double a4) {

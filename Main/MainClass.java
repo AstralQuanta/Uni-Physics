@@ -134,9 +134,9 @@ public class MainClass extends JFrame {
                                 outputMessage.setText("");
                                 getValueFromAverage += averageQ;
                                 count += 1;
-                                outputMessage.setText(results.toString() + "平均电荷量：" + averageQ + "\n");
+                                outputMessage.setText(results.toString() + "平均电荷量：" + averageQ + " 相对误差：" + ((averageQ / mill.StandardElectron) * 100) + " % " + "\n");
                             } else {
-                                outputMessage.setText(results.toString() + "平均电荷量：" + averageQ + "\n");
+                                outputMessage.setText(results.toString() + "平均电荷量：" + averageQ + " 相对误差：" + ((averageQ / mill.StandardElectron) * 100) + " % " + "\n");
                             }
                         }
                         if (count == Integer.parseInt(myList0.get(1))) {
@@ -144,6 +144,8 @@ public class MainClass extends JFrame {
                             getSumButton.addActionListener((ActionEvent e1) -> {
 
                                 totalAverage = getValueFromAverage / Integer.parseInt(myList0.get(1));
+                                String strTempsMill = "油滴总和大小：" + getValueFromAverage + "\n" + "全部油滴的平均值：" + totalAverage;
+
                                 JOptionPane.showMessageDialog(null, "油滴总和大小：" + getValueFromAverage + "\n" + "全部油滴的平均值：" + totalAverage, "最终结果", JOptionPane.INFORMATION_MESSAGE);
                             });
 
