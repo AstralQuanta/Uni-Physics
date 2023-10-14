@@ -64,9 +64,6 @@ public class MainClass extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openNewFrame("密里根油滴实验-Java计算器");
-                jpanel1.setLayout(new BoxLayout(jpanel1, BoxLayout.Y_AXIS));
-                jpanel1 = new JPanel(new GridBagLayout());
-                newFrame1.add(jpanel1);
 
                 JLabel label0 = new JLabel("同一油滴重复计算的次数和全部共要测量的油滴数量 输入例如：3，5");
                 JLabel label1 = new JLabel("油滴平衡电压(V) 输入例如：100，101...");
@@ -273,6 +270,10 @@ public class MainClass extends JFrame {
 
         newFrame1 = new JFrame(buttonName);
         newFrame1.setSize(width, height);
+        jpanel1 = new JPanel(new GridBagLayout());
+
+        jpanel1.setLayout(new BoxLayout(jpanel1, BoxLayout.Y_AXIS));
+        newFrame1.add(jpanel1);
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int screenWidth = (int) screenSize.getWidth();
